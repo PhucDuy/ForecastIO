@@ -9,7 +9,7 @@
 import Foundation
 
 /// The weather data for a location at a specific time.
-public struct Forecast {
+public struct Forecast : Codable{
     
     /// The requested latitude.
     public let latitude: Double
