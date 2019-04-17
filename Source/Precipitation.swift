@@ -22,4 +22,5 @@ public enum Precipitation: String, Codable {
     
     /// Haily.
     case hail = "hail"
+    
 }

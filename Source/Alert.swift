@@ -45,22 +45,4 @@ public struct Alert: Codable {
         case warning = "warning"
     }
     
-    /// Creates a new `Alert` from a JSON object.
-    ///
-    /// - parameter json: A JSON object with keys corresponding to the `Alert`'s properties.
-    ///
-    /// - returns: A new `Alert` filled with data from the given JSON object.
-    public init(fromJSON json: NSDictionary) {
-        title = json["title"] as! String
-        if let jsonExpires = json["expires"] as? Double {
-            expires = Date(timeIntervalSince1970: jsonExpires)
-        } else {
-            expires = nil
-        }
-        time = Date(timeIntervalSince1970: json["time"] as! Double)
-        uri = URL(string: json["uri"] as! String)!
-        description = json["description"] as! String
-        regions = json["regions"] as! [String]
-        severity = Severity(rawValue: json["severity"] as! String)!
-    }
 }

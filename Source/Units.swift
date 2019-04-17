@@ -25,4 +25,5 @@ public enum Units: String, Codable {
     
     /// Automatically use the appropriate units based on the location for which you are requesting data.
     case auto = "auto"
+    
 }

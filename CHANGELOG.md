@@ -2,9 +2,37 @@
 
 ForecastIO adheres to [Semantic Versioning](http://semver.org/).
 
+## 6.0.1
+
+Released on April 8, 2019.
+
+### Updated
+- `CodingKeys` for precipitation properties on `DataPoint`
+- `nearestStations` on `Flag` is now optional
+- All unit test JSON files are now included in all unit test targets
+
+## 6.0.0
+
+Released on March 15, 2019.
+
+### Added
+- Most structs now conform to `Decodable`
+- `temperatureMax`, `temperatureMaxTime`, `temperatureMin`, `temperatureMinTime`, `apparentTemperatureMax`, `apparentTemperatureMaxTime`, `apparentTemperatureMin`, `apparentTemperatureMinTime`, `windGustTime` on `DataPoint`
+- New errors to `ForecastIOError`: `.missingData`, `.missingHeaders`, and `.unexpectedError`
+- `nearestStation` on `Flag`
+
+### Updated
+- Unit test example JSON data
+- Unit tests to conform to new and removed properties and `Decodable`
+
+### Removed
+- Custom `init` methods on structs that now conform to `Decodable`
+- `ForecastIOError.invalidJSON` error
+- `darkSkyStations`, `dataPointStations`, `isdStations`, `lampStations`, `metarStations`, and `metnoLicense` from `Flag`
+
 ## 5.1.0
 
-Release on October 2, 2018.
+Released on October 2, 2018.
 
 ### Added
 - Support for Hebrew and Latvian
